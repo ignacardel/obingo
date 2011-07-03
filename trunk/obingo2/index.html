@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+
+<script src="jquery.js"></script>
+<script>
+var timestamp = null;
+function callComplete(response) {
+	//alert("Response received is: "+response);
+	var json = eval('(' + response + ')');
+	 $("#numeros").append(
+            "<div>"+json['msg']+"</div>"
+        );
+	timestamp  = json['timestamp'];
+	// reconnect to the server
+	connect();
+};
+
+function connect() {
+	// when the call completes, callComplete() will be called along with
+	// the response returned
+	$.post('script.php?timestamp='+timestamp, {}, callComplete);
+};
+
+$(document).ready( function() {
+	connect();
+});
+</script>
+</head>
+
+<body>
+<div id="numeros">
+
+    </div>
+</body>
+</html>
