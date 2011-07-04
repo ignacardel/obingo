@@ -33,9 +33,14 @@ function connect() {
 };
 
 function recibircantados(response){
-    $("#numeros").append(
-        "<div>"+response+"</div>"
-        );
+
+    var json = eval('(' + response + ')');
+    
+    for (var i=0;i<json.length;i++){
+        $("#numeros").append(
+            "<div>"+json[i]+"</div>"
+            );
+    }
 
     connect();
 };
