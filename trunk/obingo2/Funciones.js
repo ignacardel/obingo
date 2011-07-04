@@ -40,6 +40,37 @@ function recibircantados(response){
     connect();
 };
 
+function bingo(){
+
+    $.ajax({
+        type : 'GET',
+        url  : 'write.php?opcion=1',
+        async : true,
+        cache : false
+    });
+
+    //aqui tiene que llamarse al metodo que valida......
+    var test=Math.floor(Math.random()*2);
+    if (test==1)
+    {
+        $.ajax({
+            type : 'GET',
+            url  : 'write.php?opcion=2',
+            async : true,
+            cache : false
+        });
+    }
+    
+    $.ajax({
+        type : 'GET',
+        url  : 'write.php?opcion=3',
+        async : true,
+        cache : false
+    });
+
+	
+}
+
 function pedircantados(){
     $.post('pedircantados.php', {}, recibircantados);
 };
