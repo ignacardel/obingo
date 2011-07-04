@@ -504,3 +504,24 @@ th, td {
 	text-align: center;
 	font-size: 14px;
 }
+
+#card1{
+    float: left;
+    width: 234px;
+    margin-right: 50px;
+}
+
+#card2{
+}
+
+#card3{
+    float: left;
+    width: 234px;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+#card4{
+    margin-top: 50px;
+}
+
