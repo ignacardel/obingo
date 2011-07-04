@@ -16,7 +16,9 @@ if ($fh) {
         }
     }
     fclose($fh);
-}
+}else
+    $response['msg']='pausa';
+
 echo json_encode($response);
 
 //include "cerrar_conexion.php";

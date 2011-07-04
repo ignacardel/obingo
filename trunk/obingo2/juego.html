@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : OBINGO
+
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20110329
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>oBingo!</title>
+        <link href="CSS/style.css" rel="stylesheet" type="text/css" media="screen" />
+        <script src="cartones.js" type="text/javascript" language="javascript"></script>
+        <script src="jquery.js"></script>
+        <script src="jquery-ui.min.js"></script>
+
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header" class="container">
+                <div id="logo">
+                    <h1><a href="#">OBINGO
+                        </a></h1>
+                    <p>La mejor forma de jugar BINGO!</p>
+                </div>
+                <div id="menu">
+                    <ul>
+                        <li class="current_page_item"><a href="#">Homepage</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Photos</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Links</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end #header -->
+            <div id="splash" class="container"><img src="CSS/images/img02.jpg" width="1000" height="300" alt="" /></div>
+            <div id="page" class="container">
+                <div id="marketing">
+                    <p class="text1">Para jugar es muy fácil!</p>
+                    <p class="text2"><a href="#">Comenzar Partida</a></p>
+                </div>
+                <div id="content">
+                    <p><input id="botonpedircarton" type="button" value="Pedir Carton!" onClick="pedircarton()"></p>
+                    <p>&nbsp;</p>
+                    <div>
+                    <table id="carton1" >
+                        <tr>
+                            <th width="20%">b</th>
+                            <th width="20%">i</th>
+                            <th width="20%">n</th>
+                            <th width="20%">g</th>
+                            <th width="20%">o</th>
+                        </tr>
+                        <tr>
+                            <td  ><div id="square0carton1" onClick="pintar(this)"></div></td>
+                            <td   ><div id="square1carton1" onClick="pintar(this)"></div></td>
+                            <td   ><div id="square2carton1" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square3carton1" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square4carton1" onClick="pintar(this)"></div></td>
+                        </tr>
+                        <tr>
+                            <td  ><div id="square5carton1" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square6carton1" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square7carton1" onClick="pintar(this)"></div></td>
+                            <td ><div id="square8carton1" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square9carton1" onClick="pintar(this)"></div></td>
+                        </tr>
+                        <tr>
+                            <td ><div id="square10carton1" onClick="pintar(this)"></div></td>
+                            <td ><div id="square11carton1" onClick="pintar(this)"></div></td>
+                            <td >oBingo</td>
+                            <td  ><div id="square12carton1" onClick="pintar(this)"></div></td>
+                            <td ><div id="square13carton1" onClick="pintar(this)"></div></td>
+                        </tr>
+                        <tr>
+                            <td  ><div id="square14carton1" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square15carton1" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square16carton1" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square17carton1" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square18carton1" onClick="pintar(this)"></div></td>
+                        </tr>
+                        <tr>
+                            <td  ><div id="square19carton1" onClick="pintar(this)"></div></td>
+                            <td ><div id="square20carton1" onClick="pintar(this)"></div></td>
+                            <td ><div id="square21carton1" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square22carton1" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square23carton1" onClick="pintar(this)"></div></td>
+                        </tr>
+                        <tr><td colspan="5"><input type="button" value="Bingo!" onClick="bingo()"></input></td></tr>
+                    </table>
+                     </div>
+                    <p>&nbsp;</p>
+                    <div>
+                    <table id="carton2" style="display:none">
+                        <tr>
+                            <th width="20%">b</th>
+                            <th width="20%">i</th>
+                            <th width="20%">n</th>
+                            <th width="20%">g</th>
+                            <th width="20%">o</th>
+                        </tr>
+                        <tr>
+                            <td  ><div id="square0carton2" onClick="pintar(this)"></div></td>
+                            <td   ><div id="square1carton2" onClick="pintar(this)"></div></td>
+                            <td   ><div id="square2carton2" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square3carton2" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square4carton2" onClick="pintar(this)"></div></td>
+                        </tr>
+                        <tr>
+                            <td  ><div id="square5carton2" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square6carton2" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square7carton2" onClick="pintar(this)"></div></td>
+                            <td ><div id="square8carton2" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square9carton2" onClick="pintar(this)"></div></td>
+                        </tr>
+                        <tr>
+                            <td ><div id="square10carton2" onClick="pintar(this)"></div></td>
+                            <td ><div id="square11carton2" onClick="pintar(this)"></div></td>
+                            <td >oBingo</td>
+                            <td  ><div id="square12carton2" onClick="pintar(this)"></div></td>
+                            <td ><div id="square13carton2" onClick="pintar(this)"></div></td>
+                        </tr>
+                        <tr>
+                            <td  ><div id="square14carton2" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square15carton2" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square16carton2" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square17carton2" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square18carton2" onClick="pintar(this)"></div></td>
+                        </tr>
+                        <tr>
+                            <td  ><div id="square19carton2" onClick="pintar(this)"></div></td>
+                            <td ><div id="square20carton2" onClick="pintar(this)"></div></td>
+                            <td ><div id="square21carton2" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square22carton2" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square23carton2" onClick="pintar(this)"></div></td>
+                        </tr>
+                        <tr><td colspan="5"><input type="button" value="Bingo!" onClick="bingo()"></input></td></tr>
+                    </table>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div>
+                    <table id="carton3" style="display:none">
+                        <tr>
+                            <th width="20%">b</th>
+                            <th width="20%">i</th>
+                            <th width="20%">n</th>
+                            <th width="20%">g</th>
+                            <th width="20%">o</th>
+                        </tr>
+                        <tr>
+                            <td  ><div id="square0carton3" onClick="pintar(this)"></div></td>
+                            <td   ><div id="square1carton3" onClick="pintar(this)"></div></td>
+                            <td   ><div id="square2carton3" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square3carton3" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square4carton3" onClick="pintar(this)"></div></td>
+                        </tr>
+                        <tr>
+                            <td  ><div id="square5carton3" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square6carton3" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square7carton3" onClick="pintar(this)"></div></td>
+                            <td ><div id="square8carton3" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square9carton3" onClick="pintar(this)"></div></td>
+                        </tr>
+                        <tr>
+                            <td ><div id="square10carton3" onClick="pintar(this)"></div></td>
+                            <td ><div id="square11carton3" onClick="pintar(this)"></div></td>
+                            <td >oBingo</td>
+                            <td  ><div id="square12carton3" onClick="pintar(this)"></div></td>
+                            <td ><div id="square13carton3" onClick="pintar(this)"></div></td>
+                        </tr>
+                        <tr>
+                            <td  ><div id="square14carton3" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square15carton3" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square16carton3" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square17carton3" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square18carton3" onClick="pintar(this)"></div></td>
+                        </tr>
+                        <tr>
+                            <td  ><div id="square19carton3" onClick="pintar(this)"></div></td>
+                            <td ><div id="square20carton3" onClick="pintar(this)"></div></td>
+                            <td ><div id="square21carton3" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square22carton3" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square23carton3" onClick="pintar(this)"></div></td>
+                        </tr>
+                        <tr><td colspan="5"><input type="button" value="Bingo!" onClick="bingo()"></input></td></tr>
+                    </table>
+                    </div>
+                    <p>&nbsp;</p>
+                    <div>
+                    <table id="carton4" style="display:none">
+                        <tr>
+                            <th width="20%">b</th>
+                            <th width="20%">i</th>
+                            <th width="20%">n</th>
+                            <th width="20%">g</th>
+                            <th width="20%">o</th>
+                        </tr>
+                        <tr>
+                            <td  ><div id="square0carton4" onClick="pintar(this)"></div></td>
+                            <td   ><div id="square1carton4" onClick="pintar(this)"></div></td>
+                            <td   ><div id="square2carton4" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square3carton4" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square4carton4" onClick="pintar(this)"></div></td>
+                        </tr>
+                        <tr>
+                            <td  ><div id="square5carton4" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square6carton4" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square7carton4" onClick="pintar(this)"></div></td>
+                            <td ><div id="square8carton4" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square9carton4" onClick="pintar(this)"></div></td>
+                        </tr>
+                        <tr>
+                            <td ><div id="square10carton4" onClick="pintar(this)"></div></td>
+                            <td ><div id="square11carton4" onClick="pintar(this)"></div></td>
+                            <td >oBingo</td>
+                            <td  ><div id="square12carton4" onClick="pintar(this)"></div></td>
+                            <td ><div id="square13carton4" onClick="pintar(this)"></div></td>
+                        </tr>
+                        <tr>
+                            <td  ><div id="square14carton4" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square15carton4" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square16carton4" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square17carton4" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square18carton4" onClick="pintar(this)"></div></td>
+                        </tr>
+                        <tr>
+                            <td  ><div id="square19carton4" onClick="pintar(this)"></div></td>
+                            <td ><div id="square20carton4" onClick="pintar(this)"></div></td>
+                            <td ><div id="square21carton4" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square22carton4" onClick="pintar(this)"></div></td>
+                            <td  ><div id="square23carton4" onClick="pintar(this)"></div></td>
+                        </tr>
+                        <tr><td colspan="5"><input type="button" value="Bingo!" onClick="bingo()"></input></td></tr>
+                    </table>
+                    </div>
+
+
+                </div>
+                <!-- end #content -->
+                <div id="sidebar">
+                    <ul>
+
+                    </ul>
+                </div>
+                <!-- end #sidebar -->
+                <div style="clear: both;">&nbsp;</div>
+            </div>
+            <!-- end #page -->
+        </div>
+
+        <div id="footer" >
+            <p>Copyright (c) 2008 Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
+        </div>
+        <!-- end #footer -->
+    </body>
+</html>
