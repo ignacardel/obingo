@@ -23,10 +23,12 @@ Released   : 20110329
         <script src="jquery-ui.min.js"></script>
         <script src="jquery.blockUI.js"></script>
         <script src="Funciones.js"></script>
+        <script src="bingo.js"></script>
         <script>
             $(document).ready( function() {
                 $("#carton1").toggle("slow");
                 newCard();
+                pedirpatron();
                 pedircantados();
             });
         </script>
@@ -59,6 +61,7 @@ Released   : 20110329
                     <p class="text2"><a href="#">Comenzar Partida</a></p>
                 </div>
                 <div id="content">
+                    <p id="patron"></p>
                     <p><input id="botonpedircarton" type="button" value="Pedir Carton!" onClick="pedircarton()"/></p>
                     <p>&nbsp;</p>
                     <div id="card1">

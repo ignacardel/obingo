@@ -5,13 +5,19 @@
 
 var timestamp = null;
 var pausa=0;
+var cantados=new Array();
+
 function callComplete(response) {
     //alert("Response received is: "+response);
     var json = eval('(' + response + ')');
     if (json['msg']!='Bingo' && json['msg']!='Fin'){
-        pausa=0;
+        if (pausa==1){
+            pausa=0;
+            pedirpatron();
+        }
         $.unblockUI();
         pintarcantado(json['msg']);
+        cantados.push(json['msg']);
     //        $("#numeros").append(
     //            "<div>"+json['msg']+"</div>"
     //            );
@@ -22,6 +28,7 @@ function callComplete(response) {
                 message: '<p id="modal"><img src="blue-loading.gif"/>Cantaron Bingo!</p>'
             });
             despintarcantados();
+            cantados=new Array();
             //$('#numeros').empty();
             pausa=1;
         }
@@ -31,6 +38,7 @@ function callComplete(response) {
                 message: '<p id="modal"><img src="blue-loading.gif"/>Partida finalizada!</p>'
             });
             despintarcantados();
+            cantados=new Array();
             //$('#numeros').empty();
             pausa=1;
         }
@@ -51,6 +59,7 @@ function recibircantados(response){
     if (json['msg']!='pausa'){   
         for (var i=0;i<json.length;i++){
             pintarcantado2(json[i]);
+            cantados.push(json[i]);
         //            $("#numeros").append(
         //                "<div>"+json[i]+"</div>"
         //                );
@@ -62,33 +71,9 @@ function recibircantados(response){
         });
         pausa=1;
     }
-
+    
     connect();
 };
-
-function bingo(){
-
-    //$.post("write.php?opcion=1",despegar());
-
-    //aqui tiene que llamarse al metodo que valida......
-    var test=Math.floor(Math.random()*2);
-    if (test==1)
-    {
-       
-        // $.post("write.php?opcion=2");
-        
-        $.post("write.php?opcion=2",function(data) {
-            if (data==0){
-                //redirecciona al ganador!!
-                window.location = "http://www.google.com/";
-            }
-        });      
-    }
-    
-//$.post("write.php?opcion=3");
-
- 
-}
 
 function pedircantados(){
     $.post('pedircantados.php', {}, recibircantados);
