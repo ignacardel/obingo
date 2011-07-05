@@ -4,7 +4,7 @@
  */
 
 var timestamp = null;
-var pausa=0;
+var pausa=1;
 var cantados=new Array();
 
 function callComplete(response) {
@@ -13,7 +13,7 @@ function callComplete(response) {
     if (json['msg']!='Bingo' && json['msg']!='Fin'){
         if (pausa==1){
             pausa=0;
-            pedirpatron();
+            repintarelementos()
         }
         $.unblockUI();
         pintarcantado(json['msg']);
@@ -24,21 +24,19 @@ function callComplete(response) {
     }else if (json['msg']=='Bingo')
     {
         if (pausa==0){
+            despintarelementos();
             $.blockUI({
                 message: '<p id="modal"><img src="blue-loading.gif"/>Cantaron Bingo!</p>'
             });
-            despintarcantados();
-            cantados=new Array();
             //$('#numeros').empty();
             pausa=1;
         }
     }else if (json['msg']=='Fin'){
         if (pausa==0){
+            despintarelementos();
             $.blockUI({
                 message: '<p id="modal"><img src="blue-loading.gif"/>Partida finalizada!</p>'
             });
-            despintarcantados();
-            cantados=new Array();
             //$('#numeros').empty();
             pausa=1;
         }

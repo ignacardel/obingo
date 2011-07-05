@@ -73,9 +73,20 @@ function despintarcantados(){
             backgroundColor: "#eee",
             color: "#333333"
         });
-        
+    
     }
 }
+
+function despintarmarcados(carton){
+    for (var i=0;i<23;i++){
+        $("#square"+i+"carton"+carton).animate({
+            backgroundColor: "#eee",
+            color: "#333333"
+        });
+
+    }
+}
+
 function pedircarton(){
     $("#carton"+carton).toggle("slow");
     newCard();
@@ -86,3 +97,23 @@ function pedircarton(){
 }
 
 
+function repintarelementos(){
+
+    carton=1;
+    $("#carton1").toggle("slow");
+    $("#botonpedircarton").toggle();
+    newCard();
+    pedirpatron();
+}
+
+function despintarelementos(){
+    $("#nombrepatron").html('');
+    for (i=1;i<carton;i++){
+        $("#carton"+i).toggle("slow");
+        despintarmarcados(i);
+    }
+    if (carton!=5){
+    $("#botonpedircarton").toggle();}
+    despintarcantados();
+    cantados=new Array();
+}

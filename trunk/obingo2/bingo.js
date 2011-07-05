@@ -7,12 +7,27 @@ var idpatron=null;
 var nombrepatron=null;
 var posicionespatron=new Array();
 
-function bingo(){
+function bingo(carton){
 
-var valido=true;
+    var cont=0;
     //$.post("write.php?opcion=1",despegar());
 
     //aqui tiene que llamarse al metodo que valida......
+
+
+
+    for (var i = 0; i < posicionespatron.length; i++){
+        if ($("#square"+posicionespatron[i]+"carton"+carton).css("backgroundColor")=="rgb(52, 94, 155)"){
+            
+            //alert($("#square"+posicionespatron[i]+"carton"+carton).html());
+            //alert(cantados);
+
+            if (cantados.indexOf($("#square"+posicionespatron[i]+"carton"+carton).html())!=(-1)) cont++;
+        }
+    }
+
+   
+    
     
     var test=Math.floor(Math.random()*2);
     if (test==1)
@@ -39,7 +54,7 @@ function pedirpatron(){
         idpatron=json['id'];
         nombrepatron=json['nombre'];
         pedirposicionespatron();
-         $("#patron").html(nombrepatron);
+        $("#nombrepatron").html("Patrón actual: "+nombrepatron);
     });
     
 }
