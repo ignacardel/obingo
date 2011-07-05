@@ -6,7 +6,7 @@ function newCard() {
 
     if (document.getElementById) {
         for (var i=0; i<24; i++) {
-            setSquare(i);
+                setSquare(i);
         }
         carton=carton+1;
     }
@@ -108,12 +108,14 @@ function repintarelementos(){
 
 function despintarelementos(){
     $("#nombrepatron").html('');
+    $("#numeroactual").html('');
     for (i=1;i<carton;i++){
         $("#carton"+i).toggle("slow");
         despintarmarcados(i);
     }
     if (carton!=5){
-    $("#botonpedircarton").toggle();}
+        $("#botonpedircarton").toggle();
+    }
     despintarcantados();
     despintarpatron();
     cantados=new Array();

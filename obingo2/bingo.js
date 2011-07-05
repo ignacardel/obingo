@@ -9,28 +9,37 @@ var posicionespatron=new Array();
 
 function bingo(carton){
 
-    var cont=0;
+    var bingo=false;
     //$.post("write.php?opcion=1",despegar());
 
     //aqui tiene que llamarse al metodo que valida......
 
-
-
-    for (var i = 0; i < posicionespatron.length; i++){
-        if ($("#square"+posicionespatron[i]+"carton"+carton).css("backgroundColor")=="rgb(52, 94, 155)"){
+    if ((idpatron!=1)&&(idpatron!=2)){
+        var cont=0;
+        for (var i = 0; i < posicionespatron.length; i++){
+            if ($("#square"+posicionespatron[i]+"carton"+carton).css("backgroundColor")=="rgb(52, 94, 155)"){
             
-            //alert($("#square"+posicionespatron[i]+"carton"+carton).html());
-            //alert(cantados);
+                //alert($("#square"+posicionespatron[i]+"carton"+carton).html());
+                //alert(cantados);
 
-            if (cantados.indexOf($("#square"+posicionespatron[i]+"carton"+carton).html())!=(-1)) cont++;
+                if (cantados.indexOf($("#square"+posicionespatron[i]+"carton"+carton).html())!=(-1)) cont++;
+            }
+        }
+        if (cont==posicionespatron.length) bingo=true;
+    }else{
+        if (idpatron==1){
+            if (horizontal(carton)==true) bingo=true;
+        }else{
+            if (idpatron==2){
+                if (vertical(carton)==true) bingo=true;
+            }
         }
     }
-
+   
    
     
-    
-    var test=Math.floor(Math.random()*2);
-    if (test==1)
+    //var test=Math.floor(Math.random()*2);
+    if (bingo)
     {
 
         // $.post("write.php?opcion=2");
@@ -53,7 +62,13 @@ function pedirpatron(){
         var json = eval('(' + data + ')');
         idpatron=json['id'];
         nombrepatron=json['nombre'];
-        pedirposicionespatron();
+        if ((idpatron!=1)&&(idpatron!=2)){
+            if ($("#patron").css("display")=="none") $("#patron").toggle();
+            pedirposicionespatron();
+        }
+        else{
+            if ($("#patron").css("display")!="none") $("#patron").toggle();
+        }
         $("#nombrepatron").html("Patrón actual: "+nombrepatron);
     });
     

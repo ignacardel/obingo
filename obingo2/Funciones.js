@@ -17,6 +17,7 @@ function callComplete(response) {
         }
         $.unblockUI();
         pintarcantado(json['msg']);
+        $('#numeroactual').hide().html(json['msg']).fadeIn('slow');
         cantados.push(json['msg']);
     //        $("#numeros").append(
     //            "<div>"+json['msg']+"</div>"
