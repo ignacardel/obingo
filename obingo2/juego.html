@@ -57,11 +57,51 @@ Released   : 20110329
             <div id="splash" class="container"><img src="CSS/images/img02.jpg" width="1000" height="300" alt="" /></div>
             <div id="page" class="container">
                 <div id="marketing">
-                    <p class="text1">Para jugar es muy fácil!</p>
-                    <p class="text2"><a href="#">Comenzar Partida</a></p>
+                    <div id="nombrepatron" class="text1"></div>
+                    <div id="numeroactual" class="text2">32</div>
+                    <div id="patron">
+
+
+                        <table id="patront" class="patron">
+                            <tr>
+                                <td  ><div id="patron0" ></div></td>
+                                <td   ><div id="patron1" ></div></td>
+                                <td   ><div id="patron2" ></div></td>
+                                <td  ><div id="patron3" ></div></td>
+                                <td  ><div id="patron4" ></div></td>
+                            </tr>
+                            <tr>
+                                <td  ><div id="patron5" ></div></td>
+                                <td  ><div id="patron6" ></div></td>
+                                <td  ><div id="patron7" ></div></td>
+                                <td ><div id="patron8" ></div></td>
+                                <td  ><div id="patron9" ></div></td>
+                            </tr>
+                            <tr>
+                                <td ><div id="patron10" ></div></td>
+                                <td ><div id="patron11" ></div></td>
+                                <td ></td>
+                                <td  ><div id="patron12" ></div></td>
+                                <td ><div id="patron13" ></div></td>
+                            </tr>
+                            <tr>
+                                <td  ><div id="patron14" ></div></td>
+                                <td  ><div id="patron15" ></div></td>
+                                <td  ><div id="patron16" ></div></td>
+                                <td  ><div id="patron17" ></div></td>
+                                <td  ><div id="patron18" ></div></td>
+                            </tr>
+                            <tr>
+                                <td  ><div id="patron19" ></div></td>
+                                <td ><div id="patron20" ></div></td>
+                                <td ><div id="patron21" ></div></td>
+                                <td  ><div id="patron22" ></div></td>
+                                <td  ><div id="patron23" ></div></td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
                 <div id="content">
-                    <p id="patron"></p>
                     <p><input id="botonpedircarton" type="button" value="Pedir Carton!" onClick="pedircarton()"/></p>
                     <p>&nbsp;</p>
                     <div id="card1">
@@ -108,7 +148,7 @@ Released   : 20110329
                                 <td  ><div id="square22carton1" onClick="pintar(this)"></div></td>
                                 <td  ><div id="square23carton1" onClick="pintar(this)"></div></td>
                             </tr>
-                            <tr><td colspan="5"><input type="button" value="Bingo!" onClick="bingo()"></input></td></tr>
+                            <tr><td colspan="5"><input type="button" value="Bingo!" onClick="bingo(1)"></input></td></tr>
                         </table>
                     </div>
                     <div id="card2">
@@ -155,7 +195,7 @@ Released   : 20110329
                                 <td  ><div id="square22carton2" onClick="pintar(this)"></div></td>
                                 <td  ><div id="square23carton2" onClick="pintar(this)"></div></td>
                             </tr>
-                            <tr><td colspan="5"><input type="button" value="Bingo!" onClick="bingo()"></input></td></tr>
+                            <tr><td colspan="5"><input type="button" value="Bingo!" onClick="bingo(2)"></input></td></tr>
                         </table>
                     </div>
                     <div id="card3">
@@ -202,7 +242,7 @@ Released   : 20110329
                                 <td  ><div id="square22carton3" onClick="pintar(this)"></div></td>
                                 <td  ><div id="square23carton3" onClick="pintar(this)"></div></td>
                             </tr>
-                            <tr><td colspan="5"><input type="button" value="Bingo!" onClick="bingo()"></input></td></tr>
+                            <tr><td colspan="5"><input type="button" value="Bingo!" onClick="bingo(3)"></input></td></tr>
                         </table>
                     </div>
                     <div id="card4">
@@ -249,7 +289,7 @@ Released   : 20110329
                                 <td  ><div id="square22carton4" onClick="pintar(this)"></div></td>
                                 <td  ><div id="square23carton4" onClick="pintar(this)"></div></td>
                             </tr>
-                            <tr><td colspan="5"><input type="button" value="Bingo!" onClick="bingo()"></input></td></tr>
+                            <tr><td colspan="5"><input type="button" value="Bingo!" onClick="bingo(4)"></input></td></tr>
                         </table>
                     </div>
 
@@ -257,115 +297,120 @@ Released   : 20110329
                 </div>
                 <!-- end #content -->
                 <div id="sidebar">
-                    <table align="center" id="cantados" >
+                    <ul>
+                        <li>
+                            <div style="padding: 24px;"><h1>Numeros Cantados:</h1></div>
+                            <table align="center" id="cantados" >
 
-                        <tr>
-                            <td><div id="1cantados" >1</div></td>
-                            <td><div id="2cantados" >2</div></td>
-                            <td><div id="3cantados" >3</div></td>
-                            <td  ><div id="4cantados" >4</div></td>
-                            <td  ><div id="5cantados" >5</div></td>
-                        </tr>
-                        <tr>
-                            <td  ><div id="6cantados" >6</div></td>
-                            <td  ><div id="7cantados" >7</div></td>
-                            <td  ><div id="8cantados" >8</div></td>
-                            <td ><div id="9cantados" >9</div></td>
-                            <td  ><div id="10cantados" >10</div></td>
-                        </tr>
-                        <tr>
-                            <td ><div id="11cantados" >11</div></td>
-                            <td ><div id="12cantados" >12</div></td>
-                            <td ><div id="13cantados" >13</div></td>
-                            <td  ><div id="14cantados" >14</div></td>
-                            <td ><div id="15cantados" >15</div></td>
-                        </tr>
-                        <tr>
-                            <td  ><div id="16cantados" >16</div></td>
-                            <td  ><div id="17cantados" >17</div></td>
-                            <td  ><div id="18cantados" >18</div></td>
-                            <td  ><div id="19cantados" >19</div></td>
-                            <td  ><div id="20cantados" >20</div></td>
-                        </tr>
-                        <tr>
-                            <td  ><div id="21cantados" >21</div></td>
-                            <td ><div id="22cantados" >22</div></td>
-                            <td ><div id="23cantados" >23</div></td>
-                            <td  ><div id="24cantados" >24</div></td>
-                            <td  ><div id="25cantados" >25</div></td>
-                        </tr>
-                        <tr>
-                            <td  ><div id="26cantados" >26</div></td>
-                            <td ><div id="27cantados" >27</div></td>
-                            <td ><div id="28cantados" >28</div></td>
-                            <td  ><div id="29cantados" >29</div></td>
-                            <td  ><div id="30cantados" >30</div></td>
-                        </tr>
-                        <tr>
-                            <td  ><div id="31cantados" >31</div></td>
-                            <td ><div id="32cantados" >32</div></td>
-                            <td ><div id="33cantados" >33</div></td>
-                            <td  ><div id="34cantados" >34</div></td>
-                            <td  ><div id="35cantados" >35</div></td>
-                        </tr>
-                        <tr>
-                            <td  ><div id="36cantados" >36</div></td>
-                            <td ><div id="37cantados" >37</div></td>
-                            <td ><div id="38cantados" >38</div></td>
-                            <td  ><div id="39cantados" >39</div></td>
-                            <td  ><div id="40cantados" >40</div></td>
-                        </tr>
-                        <tr>
-                            <td  ><div id="41cantados" >41</div></td>
-                            <td ><div id="42cantados" >42</div></td>
-                            <td ><div id="43cantados" >43</div></td>
-                            <td  ><div id="44cantados" >44</div></td>
-                            <td  ><div id="45cantados" >45</div></td>
-                        </tr>
-                        <tr>
-                            <td  ><div id="46cantados" >46</div></td>
-                            <td ><div id="47cantados" >47</div></td>
-                            <td ><div id="48cantados" >48</div></td>
-                            <td  ><div id="49cantados" >49</div></td>
-                            <td  ><div id="50cantados" >50</div></td>
-                        </tr>
-                        <tr>
-                            <td  ><div id="51cantados" >51</div></td>
-                            <td ><div id="52cantados" >52</div></td>
-                            <td ><div id="53cantados" >53</div></td>
-                            <td  ><div id="54cantados" >54</div></td>
-                            <td  ><div id="55cantados" >55</div></td>
-                        </tr>
-                        <tr>
-                            <td  ><div id="56cantados" >56</div></td>
-                            <td ><div id="57cantados" >57</div></td>
-                            <td ><div id="58cantados" >58</div></td>
-                            <td  ><div id="59cantados" >59</div></td>
-                            <td  ><div id="60cantados" >60</div></td>
-                        </tr>
-                        <tr>
-                            <td  ><div id="61cantados" >61</div></td>
-                            <td ><div id="62cantados" >62</div></td>
-                            <td ><div id="63cantados" >63</div></td>
-                            <td  ><div id="64cantados" >64</div></td>
-                            <td  ><div id="65cantados" >65</div></td>
-                        </tr>
+                                <tr>
+                                    <td><div id="1cantados" >1</div></td>
+                                    <td><div id="2cantados" >2</div></td>
+                                    <td><div id="3cantados" >3</div></td>
+                                    <td  ><div id="4cantados" >4</div></td>
+                                    <td  ><div id="5cantados" >5</div></td>
+                                </tr>
+                                <tr>
+                                    <td  ><div id="6cantados" >6</div></td>
+                                    <td  ><div id="7cantados" >7</div></td>
+                                    <td  ><div id="8cantados" >8</div></td>
+                                    <td ><div id="9cantados" >9</div></td>
+                                    <td  ><div id="10cantados" >10</div></td>
+                                </tr>
+                                <tr>
+                                    <td ><div id="11cantados" >11</div></td>
+                                    <td ><div id="12cantados" >12</div></td>
+                                    <td ><div id="13cantados" >13</div></td>
+                                    <td  ><div id="14cantados" >14</div></td>
+                                    <td ><div id="15cantados" >15</div></td>
+                                </tr>
+                                <tr>
+                                    <td  ><div id="16cantados" >16</div></td>
+                                    <td  ><div id="17cantados" >17</div></td>
+                                    <td  ><div id="18cantados" >18</div></td>
+                                    <td  ><div id="19cantados" >19</div></td>
+                                    <td  ><div id="20cantados" >20</div></td>
+                                </tr>
+                                <tr>
+                                    <td  ><div id="21cantados" >21</div></td>
+                                    <td ><div id="22cantados" >22</div></td>
+                                    <td ><div id="23cantados" >23</div></td>
+                                    <td  ><div id="24cantados" >24</div></td>
+                                    <td  ><div id="25cantados" >25</div></td>
+                                </tr>
+                                <tr>
+                                    <td  ><div id="26cantados" >26</div></td>
+                                    <td ><div id="27cantados" >27</div></td>
+                                    <td ><div id="28cantados" >28</div></td>
+                                    <td  ><div id="29cantados" >29</div></td>
+                                    <td  ><div id="30cantados" >30</div></td>
+                                </tr>
+                                <tr>
+                                    <td  ><div id="31cantados" >31</div></td>
+                                    <td ><div id="32cantados" >32</div></td>
+                                    <td ><div id="33cantados" >33</div></td>
+                                    <td  ><div id="34cantados" >34</div></td>
+                                    <td  ><div id="35cantados" >35</div></td>
+                                </tr>
+                                <tr>
+                                    <td  ><div id="36cantados" >36</div></td>
+                                    <td ><div id="37cantados" >37</div></td>
+                                    <td ><div id="38cantados" >38</div></td>
+                                    <td  ><div id="39cantados" >39</div></td>
+                                    <td  ><div id="40cantados" >40</div></td>
+                                </tr>
+                                <tr>
+                                    <td  ><div id="41cantados" >41</div></td>
+                                    <td ><div id="42cantados" >42</div></td>
+                                    <td ><div id="43cantados" >43</div></td>
+                                    <td  ><div id="44cantados" >44</div></td>
+                                    <td  ><div id="45cantados" >45</div></td>
+                                </tr>
+                                <tr>
+                                    <td  ><div id="46cantados" >46</div></td>
+                                    <td ><div id="47cantados" >47</div></td>
+                                    <td ><div id="48cantados" >48</div></td>
+                                    <td  ><div id="49cantados" >49</div></td>
+                                    <td  ><div id="50cantados" >50</div></td>
+                                </tr>
+                                <tr>
+                                    <td  ><div id="51cantados" >51</div></td>
+                                    <td ><div id="52cantados" >52</div></td>
+                                    <td ><div id="53cantados" >53</div></td>
+                                    <td  ><div id="54cantados" >54</div></td>
+                                    <td  ><div id="55cantados" >55</div></td>
+                                </tr>
+                                <tr>
+                                    <td  ><div id="56cantados" >56</div></td>
+                                    <td ><div id="57cantados" >57</div></td>
+                                    <td ><div id="58cantados" >58</div></td>
+                                    <td  ><div id="59cantados" >59</div></td>
+                                    <td  ><div id="60cantados" >60</div></td>
+                                </tr>
+                                <tr>
+                                    <td  ><div id="61cantados" >61</div></td>
+                                    <td ><div id="62cantados" >62</div></td>
+                                    <td ><div id="63cantados" >63</div></td>
+                                    <td  ><div id="64cantados" >64</div></td>
+                                    <td  ><div id="65cantados" >65</div></td>
+                                </tr>
 
-                        <tr>
-                            <td  ><div id="66cantados" >66</div></td>
-                            <td ><div id="67cantados" >67</div></td>
-                            <td ><div id="68cantados" >68</div></td>
-                            <td  ><div id="69cantados" >69</div></td>
-                            <td  ><div id="70cantados" >70</div></td>
-                        </tr>
-                        <tr>
-                            <td  ><div id="71cantados" >71</div></td>
-                            <td ><div id="72cantados" >72</div></td>
-                            <td ><div id="73cantados" >73</div></td>
-                            <td  ><div id="74cantados" >74</div></td>
-                            <td  ><div id="75cantados" >75</div></td>
-                        </tr>
-                    </table>
+                                <tr>
+                                    <td  ><div id="66cantados" >66</div></td>
+                                    <td ><div id="67cantados" >67</div></td>
+                                    <td ><div id="68cantados" >68</div></td>
+                                    <td  ><div id="69cantados" >69</div></td>
+                                    <td  ><div id="70cantados" >70</div></td>
+                                </tr>
+                                <tr>
+                                    <td  ><div id="71cantados" >71</div></td>
+                                    <td ><div id="72cantados" >72</div></td>
+                                    <td ><div id="73cantados" >73</div></td>
+                                    <td  ><div id="74cantados" >74</div></td>
+                                    <td  ><div id="75cantados" >75</div></td>
+                                </tr>
+                            </table>
+                        </li>
+                    </ul>
                 </div>
                 <!-- end #sidebar -->
                 <div style="clear: both;">&nbsp;</div>
