@@ -10,10 +10,14 @@ switch ($opcion) {
         fclose($handle);
         break;
     case 2: //cantar bingo
-        $file = 'bingo.txt';
-        $handle = fopen($file, 'w');
-        fwrite($handle, '1');
-        fclose($handle);
+        $filename = 'bingo.txt';
+        $response = file_get_contents($filename);
+        if ($response == 0) {
+            $file = 'bingo.txt';
+            $handle = fopen($file, 'w');
+            fwrite($handle, '1');
+            fclose($handle);
+        }
         break;
     case 3: //despausar
         $file = 'pausa.txt';
@@ -23,5 +27,5 @@ switch ($opcion) {
         break;
 }
 
-exit;
+echo $response;
 ?>
