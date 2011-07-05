@@ -12,7 +12,8 @@ if ($fh) {
     while (!feof($fh)) {
         $contenido = fgets($fh);
         if ($contenido != false) {
-            $response[] = $contenido;
+            $trimmed = trim($contenido);
+            $response[] = $trimmed;
         }
     }
     fclose($fh);
