@@ -78,7 +78,7 @@ function despintarcantados(){
 }
 
 function despintarmarcados(carton){
-    for (var i=0;i<23;i++){
+    for (var i=0;i<24;i++){
         $("#square"+i+"carton"+carton).animate({
             backgroundColor: "#eee",
             color: "#333333"
@@ -115,5 +115,6 @@ function despintarelementos(){
     if (carton!=5){
     $("#botonpedircarton").toggle();}
     despintarcantados();
+    despintarpatron();
     cantados=new Array();
 }

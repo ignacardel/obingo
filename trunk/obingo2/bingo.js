@@ -59,11 +59,30 @@ function pedirpatron(){
     
 }
 
+
+function pintarpatron(posicion){
+  
+    $("#patron"+posicion).animate({
+        backgroundColor: "#345E9B"
+    });
+}
+
+function despintarpatron(){
+    for (var i=0;i<24;i++){
+        $("#patron"+i).animate({
+            backgroundColor: "#eee",
+            color: "#333333"
+        });
+
+    }
+}
+
 function pedirposicionespatron(){
     $.post("pedirposicionespatron.php?patron="+idpatron,function(data) {
         var json = eval('(' + data + ')');
         for (var i=0;i<json.length;i++){
             posicionespatron.push(json[i]);
+            pintarpatron(json[i]);
         }
     });
 }
