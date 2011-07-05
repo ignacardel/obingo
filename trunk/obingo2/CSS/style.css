@@ -458,7 +458,8 @@ a:hover {
 }
 
 #marketing .text1 {
-    float: left;
+    /*float: left;*/
+    width: 500px;
     margin: 0px;
     padding: 0px;
     letter-spacing: -2px;
@@ -468,7 +469,18 @@ a:hover {
 }
 
 #marketing .text2 {
+    display: block;
+    width: 110px;
+    height: 38px;
+    padding: 15px 0px 0px 0px;
+    background: url(images/img07.jpg) no-repeat left top;
+    letter-spacing: -2px;
+    text-align: center;
+    text-transform: lowercase;
+    font-size: 30px;
+    color: #FFFFFF;
     float: right;
+    margin-right: 24px;
 }
 
 #marketing .text2 a {
@@ -532,5 +544,26 @@ th, td {
 #card4{
     margin-top: 50px;
     width: 534px;
+}
+
+#patront.patron{
+
+    /*padding: 10px;
+	border: 1px #666 solid;
+	text-align: center;
+	font-size: 14px;*/
+    font-family:arial;
+    color:#333;
+    padding:0px;
+    width:2px;
+    height:5px;
+    text-align:center;
+    background-color:#eee;
+}
+
+#patront{
+    width: 109px;
+    float:left;
+    margin-left: 35px;
 }
 
