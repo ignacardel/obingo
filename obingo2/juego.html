@@ -26,9 +26,9 @@ Released   : 20110329
         <script src="bingo.js"></script>
         <script>
             $(document).ready( function() {
-                $("#carton1").toggle("slow");
-                newCard();
-                pedirpatron();
+                //$("#carton1").toggle("slow");
+                //newCard();
+                //pedirpatron();
                 pedircantados();
             });
         </script>
@@ -102,7 +102,7 @@ Released   : 20110329
                     </div>
                 </div>
                 <div id="content">
-                    <p><input id="botonpedircarton" type="button" value="Pedir Carton!" onClick="pedircarton()"/></p>
+                    <p><input id="botonpedircarton" type="button" value="Pedir Carton!" style="display:none" onClick="pedircarton()"/></p>
                     <p>&nbsp;</p>
                     <div id="card1">
                         <table id="carton1" style="display:none">
