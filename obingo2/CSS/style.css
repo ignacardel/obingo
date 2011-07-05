@@ -505,6 +505,16 @@ a:hover {
     border-bottom: 1px solid #E3E3E3;
 }
 
+#modal2{
+    font-size: 34px;
+    color: #FF3030;
+    letter-spacing: -2px;
+    padding: 20px 0px 10px 0px;
+    border-top: 1px solid #E3E3E3;
+    border-bottom: 1px solid #E3E3E3;
+}
+
+
 table {
     border-collapse: collapse;
 }

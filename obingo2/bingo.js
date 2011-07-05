@@ -50,6 +50,10 @@ function bingo(carton){
                 window.location = "http://www.google.com/";
             }
         });
+    }else{
+        $.blockUI({ message:'<p id="modal2">No hay bingo! <br> Carton invalidado</p>' });
+        setTimeout($.unblockUI, 2000);
+        $("#botonbingo"+carton).html('<img src="error.png"/>')
     }
 
 //$.post("write.php?opcion=3");

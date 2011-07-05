@@ -6,7 +6,7 @@ function newCard() {
 
     if (document.getElementById) {
         for (var i=0; i<24; i++) {
-                setSquare(i);
+            setSquare(i);
         }
         carton=carton+1;
     }
