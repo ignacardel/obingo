@@ -36,7 +36,7 @@ function getNewNum() {
 }
 
 function pintar(celda){
-
+    
     if ($(celda).css("backgroundColor")!="rgb(52, 94, 155)"){
         $("#"+celda.id).animate({
             backgroundColor: "#345E9B",
