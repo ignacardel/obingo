@@ -19,9 +19,24 @@ Released   : 20110329
         <title>oBingo!</title>
         <link rel="shortcut icon" href="balls.jpg"/>
         <link href="CSS/style.css" rel="stylesheet" type="text/css" media="screen" />
+        <script src="configuracion.js"></script>
         <script src="jquery.js"></script>
-        <script src="jquery-ui.min.js"></script>
+        <script src="jquery-ui.min.js"></script> 
         <script src="jquery.blockUI.js"></script>
+        <script language="javascript">
+
+            var nav4 = window.Event ? true : false;
+            function acceptNum(evt){
+                // NOTE: Backspace = 8, Enter = 13, '0' = 48, '9' = 57
+                var key = nav4 ? evt.which : evt.keyCode;
+                return (key <= 13 || (key >= 48 && key <= 57));
+            }
+                </script>
+                <script>
+            $(document).ready( function() {
+                pedirconfiguracion();
+            });
+        </script>
     </head>
     <body>
         <div id="wrapper">
@@ -43,14 +58,33 @@ Released   : 20110329
             <div id="splash" class="container"><img src="CSS/images/img02.jpg" width="1000" height="300" alt="" /></div>
             <div id="page" class="container">
                 <div id="marketing">
-	<p class="text1">Para jugar es muy fácil!</p>
-			<p align="center" class="text4" onclick='window.location="juego.html"'>Ingresar Juego</p>
+                    <p class="text1">Configuración de Juego</p>
                 </div>
                 <div id="content">
-                </div>
+
+                    <ul>
+                        <li>Intervalo de Tiempo entre numeros cantados (seg):
+                            <input type="text" onKeyPress="return acceptNum(event)" id="tnumeros" size="2" maxlength="2"></input>
+                            <input type="button" value="Guardar" onclick="configurarjuego(1)" />
+                            </input>
+                        </li>
+                        <li>Intervalo de Tiempo entre rondas (seg):
+                            <input type="text" onKeyPress="return acceptNum(event)" id="tpartida" size="2" maxlength="2"></input>
+                            <input type="button" value="Guardar" onclick="configurarjuego(2)" />
+                            </input>
+                        </li>
+                        <li>Cantidad de numeros a cantar:
+                            <input type="text" onKeyPress="return acceptNum(event)" id="cnumero" size="2" maxlength="2"></input>
+                            <input type="button" value="Guardar" onclick="configurarjuego(3)" />
+                            </input>
+                        </li>
+                    </ul>
+                    <p><a href="administrador.html">Volver</a></p>
+            </div>
                 <!-- end #content -->
                 <div id="sidebar">
                     <ul>
+
                     </ul>
                 </div>
                 <!-- end #sidebar -->

@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : OBINGO
+
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20110329
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>oBingo!</title>
+        <link rel="shortcut icon" href="balls.jpg"/>
+        <link href="CSS/style.css" rel="stylesheet" type="text/css" media="screen" />
+        <script src="crearpatron.js"></script>
+        <script src="jquery.js"></script>
+        <script src="jquery-ui.min.js"></script> 
+        <script src="jquery.blockUI.js"></script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header" class="container">
+                <div id="logo">
+                    <h1><a href="#">OBINGO!
+                        </a></h1>
+                    <p>La mejor forma de jugar BINGO!</p>
+                </div>
+                <div id="menu">
+
+                    <ul>
+                        <li class="current_page_item"><a href="index.html">Home</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <!-- end #header -->
+            <div id="splash" class="container"><img src="CSS/images/img02.jpg" width="1000" height="300" alt="" /></div>
+            <div id="page" class="container">
+                <div id="marketing">
+                    <p class="text1">Nuevo Patrón</p>
+                </div>
+                <div id="content">
+
+                    <p>Nombre
+                        <input type="text" name="nombrepatron" id="nombrepatron"></input>
+                    </p>
+                    <table id="patront" class="patron">
+                        <tr>
+                            <td  ><div id="patron0" onClick="pintar(this)">&nbsp;</div></td>
+                            <td   ><div id="patron1" onClick="pintar(this)">&nbsp;</div></td>
+                            <td   ><div id="patron2"onClick="pintar(this)" >&nbsp;</div></td>
+                            <td  ><div id="patron3" onClick="pintar(this)">&nbsp;</div></td>
+                            <td  ><div id="patron4" onClick="pintar(this)">&nbsp;</div></td>
+                        </tr>
+                        <tr>
+                            <td  ><div id="patron5" onClick="pintar(this)">&nbsp;</div></td>
+                            <td  ><div id="patron6" onClick="pintar(this)">&nbsp;</div></td>
+                            <td  ><div id="patron7" onClick="pintar(this)">&nbsp;</div></td>
+                            <td ><div id="patron8" onClick="pintar(this)">&nbsp;</div></td>
+                            <td  ><div id="patron9" onClick="pintar(this)">&nbsp;</div></td>
+                        </tr>
+                        <tr>
+                            <td ><div id="patron10" onClick="pintar(this)">&nbsp;</div></td>
+                            <td ><div id="patron11" onClick="pintar(this)">&nbsp;</div></td>
+                            <td>&nbsp;</td>
+                            <td  ><div id="patron12" onClick="pintar(this)">&nbsp;</div></td>
+                            <td ><div id="patron13" onClick="pintar(this)">&nbsp;</div></td>
+                        </tr>
+                        <tr>
+                            <td  ><div id="patron14" onClick="pintar(this)">&nbsp;</div></td>
+                            <td  ><div id="patron15" onClick="pintar(this)">&nbsp;</div></td>
+                            <td  ><div id="patron16" onClick="pintar(this)">&nbsp;</div></td>
+                            <td  ><div id="patron17" onClick="pintar(this)">&nbsp;</div></td>
+                            <td  ><div id="patron18" onClick="pintar(this)">&nbsp;</div></td>
+                        </tr>
+                        <tr>
+                            <td  ><div id="patron19" onClick="pintar(this)">&nbsp;</div></td>
+                            <td ><div id="patron20" onClick="pintar(this)">&nbsp;</div></td>
+                            <td ><div id="patron21" onClick="pintar(this)">&nbsp;</div></td>
+                            <td  ><div id="patron22" onClick="pintar(this)">&nbsp;</div></td>
+                            <td  ><div id="patron23" onClick="pintar(this)">&nbsp;</div></td>
+                        </tr>
+                        <tr><td colspan="5" align="center" id="crearpatron"><input type="button" value="Crear Patron!" onClick="crearpatron()"></input></td></tr>
+                    </table>
+                                  <p>&nbsp;</p>
+                                  <p>&nbsp;</p>
+                                  <p>&nbsp;</p>
+                                  <p>&nbsp;</p>
+                                  <p>&nbsp;</p>
+                                  <p>&nbsp;</p>
+                                  <p>&nbsp;</p>
+                                  <p>&nbsp;</p>
+                                  <p><a href="administrador.html">Volver</a></p>
+                </div>
+                <!-- end #content -->
+                <div id="sidebar">
+                    <ul>
+
+                    </ul>
+                </div>
+                <!-- end #sidebar -->
+                <div style="clear: both;">&nbsp;</div>
+            </div>
+            <!-- end #page -->
+        </div>
+
+        <div id="footer" >
+            <p>Copyright (c) 2011 oBingo.com. All rights reserved. Designed by UCAB Solutions.</p>
+        </div>
+        <!-- end #footer -->
+    </body>
+</html>

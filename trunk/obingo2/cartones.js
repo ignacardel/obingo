@@ -109,9 +109,10 @@ function repintarelementos(){
 function despintarelementos(){
     $("#nombrepatron").html('');
     $("#numeroactual").html('');
-    for (i=1;i<carton;i++){
+    for (var i=1;i<carton;i++){
         $("#carton"+i).toggle("slow");
         despintarmarcados(i);
+        $("#botonbingo"+i).html('<input type="button" value="Bingo!" onClick="bingo('+i+')">');
     }
     if (carton!=5){
         $("#botonpedircarton").toggle();

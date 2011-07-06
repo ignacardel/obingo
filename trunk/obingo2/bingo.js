@@ -47,13 +47,13 @@ function bingo(carton){
         $.post("write.php?opcion=2",function(data) {
             if (data==0){
                 //redirecciona al ganador!!
-                window.location = "http://www.google.com/";
+                window.location = "ganador.html";
             }
         });
     }else{
         $.blockUI({ message:'<p id="modal2">No hay bingo! <br> Carton invalidado</p>' });
         setTimeout($.unblockUI, 2000);
-        $("#botonbingo"+carton).html('<img src="error.png"/>')
+        $("#botonbingo"+carton).html('<img width="20" height="20" src="error.png"/>')
     }
 
 //$.post("write.php?opcion=3");

@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+Name       : OBINGO
+
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20110329
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>oBingo!</title>
+        <link rel="shortcut icon" href="balls.jpg"/>
+        <link href="CSS/style.css" rel="stylesheet" type="text/css" media="screen" />
+        <script src="jquery.js"></script>
+        <script src="jquery-ui.min.js"></script> 
+        <script src="jquery.blockUI.js"></script>
+        <script src="registro.js"></script>
+        <script language="javascript">
+
+            var nav4 = window.Event ? true : false;
+            function acceptNum(evt){
+                // NOTE: Backspace = 8, Enter = 13, '0' = 48, '9' = 57
+                var key = nav4 ? evt.which : evt.keyCode;
+                return (key <= 13 || (key >= 48 && key <= 57));
+            }
+        </script>
+        <script>
+            $(document).ready( function() {
+                $.blockUI({message:'<p id="modal">Felicitaciones! Has Ganado! <br> Registra tus datos para reclamar tu premio.</p>'});
+                setTimeout($.unblockUI, 4000);
+            });
+        </script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header" class="container">
+                <div id="logo">
+                    <h1><a href="#">OBINGO!
+                        </a></h1>
+                    <p>La mejor forma de jugar BINGO!</p>
+                </div>
+                <div id="menu">
+
+                    <ul>
+                        <li class="current_page_item"><a href="index.html">Home</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <!-- end #header -->
+            <div id="splash" class="container"><img src="CSS/images/img02.jpg" width="1000" height="300" alt="" /></div>
+            <div id="page" class="container">
+                <div id="marketing">
+                    <p class="text1">Registro de Ganador</p>
+                </div>
+                <div id="content">
+
+                    <ul>
+                        <li><h1>Nombres:
+                          <input type="text" id="nombres" size="50" maxlength="50">
+                          </input>
+                        </h1>
+                        </li>
+                        <li><h1>Apellidos:
+                          <input type="text" id="apellidos" size="50" maxlength="50">
+                          </input>
+                        </h1>
+                        </li>
+                        <li><h1>Email:
+                          <input type="text" id="email" size="30" maxlength="30">
+                          </input>
+                        </h1>
+                        </li>
+                        <li><h1>Direccion de Hab.:
+                            <br />
+                          <textarea name="direccion" id="direccion" cols="45" rows="5"></textarea>
+                        </h1>
+                        </li>
+                        <li>
+                          <h1>Telefono:
+                          <input type="text" onKeyPress="return acceptNum(event)" id="telf" size="10" maxlength="10"/>
+                          </h1>
+                      </li>
+                    </ul>
+                    <blockquote>
+                      <p>
+                        <input type="submit" name="registro" id="registro" value="Aceptar" onclick="registro()" />
+                      </p>
+                    </blockquote>
+              </div>
+                <!-- end #content -->
+          <div id="sidebar">
+                    <ul>
+
+                    </ul>
+                </div>
+                <!-- end #sidebar -->
+                <div style="clear: both;">&nbsp;</div>
+            </div>
+            <!-- end #page -->
+        </div>
+
+        <div id="footer" >
+            <p>Copyright (c) 2011 oBingo.com. All rights reserved. Designed by UCAB Solutions.</p>
+        </div>
+        <!-- end #footer -->
+    </body>
+</html>

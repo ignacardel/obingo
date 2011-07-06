@@ -483,6 +483,36 @@ a:hover {
     margin-right: 24px;
 }
 
+#marketing .text4 {
+    display: block;
+    width: 400px;
+    height: 38px;
+    padding: 0px 0px 20px 20px;
+    background: url(images/img07.jpg) no-repeat left bottom;
+    letter-spacing: -2px;
+    text-align: left;
+    text-transform: lowercase;
+    font-size: 36px;
+    color: #FFFFFF;
+    float: right;
+    margin-right: 170px;
+    
+}
+
+#marketing .text3 {
+    display: block;
+    width: 110px;
+    height: 38px;
+    padding: 0px 0px 0px 0px;
+    letter-spacing: -2px;
+    text-align: center;
+    text-transform: lowercase;
+    font-size: 20px;
+    color: #810988;
+    float: right;
+    margin-right: 12px;
+}
+
 #marketing .text2 a {
     display: block;
     width: 252px;
