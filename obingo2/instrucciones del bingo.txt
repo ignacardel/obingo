@@ -1,0 +1,2 @@
+java -jar Bingo.jar cantar.txt cantado.txt bingo.txt pausa.txt patron.txt tnumeros.txt tpartida.txt cnumero.txt
+ 
