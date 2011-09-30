@@ -1,2 +1,13 @@
+1) montar base de datos usando-> obingo.sql
+(ojo no sirve en XAMPP,,preferible usar wamp)
+
+
+
+2) antes de ingresar a la aplicaci—n ir a la carpeta del proyecto en consola y ejecutar el siguiente comando para correr el cantador de numeros:
+
 java -jar Bingo.jar cantar.txt cantado.txt bingo.txt pausa.txt patron.txt tnumeros.txt tpartida.txt cnumero.txt
  
+
+^si la ejecucion de este comando da error hay un peo con la BD
+
+3) ingresar http://localhost/obingo2
